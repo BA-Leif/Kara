@@ -1,0 +1,2450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="5265A92188A0A977">
+  <PROJECT FORMAT="1.00" NAME="Taschenrechner" AUTHOR="lerichsen" CREATED="2019.10.10 09:56:53" MODIFIED="2019.10.15 14:10:16">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="Hauptprogramm 1" CREATED="2019.10.10 09:56:57" MODIFIED="2019.10.15 13:31:09">
+        <LAYOUT FORMAT="1.00" COLUMNS="3" ROWS="6">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="306">
+                <TEXT><![CDATA[public static Boolean End = false
+
+public static double FormerAnswer = 0.0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="283">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="197">
+                <TEXT><![CDATA[!end?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Hauptprogramm 1]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[consoleInterface]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="3">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="239">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="4">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="303">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="307" FROM="306" TO="283" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="202" FROM="197" TO="2" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="241" FROM="239" TO="283" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="282" FROM="197" TO="4" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="305" FROM="4" TO="303" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="287" FROM="1" TO="306" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="304" FROM="303" TO="239" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="286" FROM="283" TO="197" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="2" NAME="consoleInterface" CREATED="2019.10.10 10:13:00" MODIFIED="2019.10.15 13:31:09">
+        <LAYOUT FORMAT="1.00" COLUMNS="3" ROWS="9">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[consoleInterface]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Console.WriteLine("Hauptmenü")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Console.WriteLine()
+ Console.WriteLine(" Wählen sie eine der Folgenden Rechenoptionen:")
+ Console.WriteLine(" 1: Addition 2: Subtraktion");
+ Console.WriteLine(" 3: Multiplikation 4: Division");
+ Console.WriteLine(" 5: n-te Potenz 7: Quadrieren");
+ Console.WriteLine(" 6: n-te Wurzel 8: 2te Wurzel");
+ Console.WriteLine(" 9: Fakultät ")
+
+ Console.WriteLine("R: zufällige Zahl eines belibigen Bereiches")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[Console.WriteLine("sonstige Optionen:")
+
+Console.WriteLine("H: Hilfe")
+Console.WriteLine("E: Programm beenden")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[string input
+input = Console.ReadLine()
+input = input.ToLower]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="152">
+                <TEXT><![CDATA[input.Length <= 1
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="147">
+                <TEXT><![CDATA[parseAll]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="153">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="6">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="151">
+                <TEXT><![CDATA[eventuell Eingaben, die nur aus einem Zeichenbestehen rausfiltern]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="18" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="20" TO="152" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="154" FROM="152" TO="153" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="148" FROM="147" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="150" FROM="152" TO="147" TEXT="nein" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="15" NAME="consoleChooseOperation (string input)" CREATED="2019.10.11 10:20:09" MODIFIED="2019.10.15 13:31:09">
+        <LAYOUT FORMAT="1.00" COLUMNS="4" ROWS="17">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="171">
+                <TEXT><![CDATA[Eingabe von 
+double X
+double Y
+double operationIndex]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="212">
+                <TEXT><![CDATA[double output = 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="177">
+                <TEXT><![CDATA[double operationSwitch = operationIndex]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="173" ASSOCIATE="175">
+                <TEXT><![CDATA[case (operationSwitch)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="182">
+                <TEXT><![CDATA[operationSwitch == 
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="184">
+                <TEXT><![CDATA[operationSwitch == 
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="186">
+                <TEXT><![CDATA[operationSwitch == 
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="188">
+                <TEXT><![CDATA[operationSwitch == 
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="190">
+                <TEXT><![CDATA[operationSwitch == 
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="192">
+                <TEXT><![CDATA[operationSwitch == 
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="194">
+                <TEXT><![CDATA[operationSwitch == 
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="200">
+                <TEXT><![CDATA[dafault?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="175" ASSOCIATE="173">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="198">
+                <TEXT><![CDATA[Console.ReadLine()
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="16">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[calculateAddition]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[calculateSubtraction]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="23">
+                <TEXT><![CDATA[calculateProduct]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="24">
+                <TEXT><![CDATA[calculateDivision]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="25">
+                <TEXT><![CDATA[calculateExponentiation]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="113">
+                <TEXT><![CDATA[calculateRootChooseExponent]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="27">
+                <TEXT><![CDATA[calculateFaculty]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="13">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="202">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="7">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[Funktionen Schreiben ihren Wert IMMER in die Variable formerAnswer]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="11">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="168">
+                <TEXT><![CDATA[Funktionen Schreiben ihren Wert IMMER in die Variable formerAnswer]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[consoleChooseOperation (string input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="176" FROM="175" TO="198" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="208" FROM="186" TO="23" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="183" FROM="182" TO="184" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="174" FROM="173" TO="182" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="195" FROM="194" TO="200" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="193" FROM="192" TO="194" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="187" FROM="186" TO="188" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="207" FROM="188" TO="24" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="185" FROM="184" TO="186" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="206" FROM="190" TO="25" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="201" FROM="200" TO="175" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="204" FROM="194" TO="27" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="203" FROM="200" TO="202" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="213" FROM="212" TO="177" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="205" FROM="192" TO="113" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="199" FROM="198" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="111" FROM="1" TO="171" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="189" FROM="188" TO="190" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="191" FROM="190" TO="192" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="172" FROM="171" TO="212" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="178" FROM="177" TO="173" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="209" FROM="184" TO="22" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="210" FROM="182" TO="21" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="10" NAME="calculateConvertInput" CREATED="2019.10.10 10:54:40" MODIFIED="2019.10.14 10:50:18">
+        <LAYOUT FORMAT="1.00" COLUMNS="3" ROWS="19">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[calculateConvertInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[double output
+WorngInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="85">
+                <TEXT><![CDATA[string input = Console.ReadLine()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="142">
+                <TEXT><![CDATA[input = input.Replace('.', ',')]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="87">
+                <TEXT><![CDATA[input == "e"
+|| input == E
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="97">
+                <TEXT><![CDATA[(input == "A" ||
+input == "a" )
+
+&& useFormerAnswer
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="145">
+                <TEXT><![CDATA[input.StartsWith("R(")
+||
+input.StartsWith("r(")?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="69" ASSOCIATE="71">
+                <TEXT><![CDATA[Try]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="158">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="160">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="71" ASSOCIATE="69">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="75">
+                <TEXT><![CDATA[Catch]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="82">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="16">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="113">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="17">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="67">
+                <TEXT><![CDATA[return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="18">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="91">
+                <TEXT><![CDATA[end = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="118">
+                <TEXT><![CDATA[WrongInput = false
+output = formerAnswer]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="171">
+                <TEXT><![CDATA[WrongInput = false]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="150">
+                <TEXT><![CDATA[calculateRandom(input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="165">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[WrongInput = false
+output = Double.Parse(input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="167">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="79">
+                <TEXT><![CDATA[Console.WriteLine("Ungültige Eingabe. Versuche es erneut oder Beende das Programm mit -E-")
+
+wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="80">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="155">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="101">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="173">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="16">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="115">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="85" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="164" FROM="158" TO="165" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="68" FROM="67" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="70" FROM="69" TO="158" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="74" FROM="71" TO="75" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="83" FROM="82" TO="113" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="78" FROM="75" TO="79" TEXT="Fehler" />
+          <CONNECTION FORMAT="1.00" ID="81" FROM="79" TO="80" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="76" FROM="75" TO="82" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="84" FROM="80" TO="82" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="88" FROM="87" TO="97" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="90" FROM="87" TO="91" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="156" FROM="91" TO="155" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="161" FROM="160" TO="71" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="169" FROM="4" TO="167" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="98" FROM="97" TO="145" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="117" FROM="115" TO="113" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="144" FROM="118" TO="101" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="114" FROM="113" TO="67" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="100" FROM="97" TO="118" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="174" FROM="173" TO="115" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="86" FROM="85" TO="142" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="143" FROM="142" TO="87" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="146" FROM="145" TO="69" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="177" FROM="171" TO="150" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="104" FROM="101" TO="173" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="178" FROM="150" TO="173" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="157" FROM="155" TO="101" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="168" FROM="165" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="170" FROM="167" TO="160" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="151" FROM="145" TO="171" TEXT="ja" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="18" NAME="RandomNumber (string input)" CREATED="2019.10.11 11:09:13" MODIFIED="2019.10.14 10:50:18">
+        <LAYOUT FORMAT="1.00" COLUMNS="5" ROWS="22">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="39">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="74">
+                <TEXT><![CDATA[lowerBorder = Integer.Parse(input.Substring(0, (positionOfPeriod -1)))
+
+upperBorder = Integer.Parse(input.Substring( (positionOfPeriod +1, input.Length)))]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="68">
+                <TEXT><![CDATA[output = rnd.Next( lowerBorder, upperBorder)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="51">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[RandomNumber (string input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="2">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Annahme: Der Sting wurde so gefiltert, dass "R(" am Anfang steht.]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="72">
+                <TEXT><![CDATA[Random rnd = new Random()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="9">
+                <TEXT><![CDATA[int positionOfPeriod = 0
+int lowerBorder = 0
+int upperBorder = 100
+
+int output = 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="7">
+                <TEXT><![CDATA[input = input.Substring( 2, ((input.Length -1) -2 -1))
+
+input = input.Replace('.', ',');]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="31">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="11">
+                <TEXT><![CDATA[for-Schleife mit i
+von 0 < input-Length]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="59" ASSOCIATE="61">
+                <TEXT><![CDATA[try]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="45">
+                <TEXT><![CDATA[Double.Parse(input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="34">
+                <TEXT><![CDATA[positionOfPeriod == 0
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="54">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="76">
+                <TEXT><![CDATA[Console.WriteLine("Zufall: " + output)
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="16">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="61" ASSOCIATE="59">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="17">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="80">
+                <TEXT><![CDATA[catch?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="89">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="20">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="95">
+                <TEXT><![CDATA[return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="21">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="4">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Abfrage, ob ein "," enthalten ist.
+
+Dann die 2 verschiedenen Funktionen starten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="5">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="5">
+                <TEXT><![CDATA[Idee: String isolieren: 
+Ersten 2 Stellen kommen weg und auch die letzte ")"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="13">
+                <TEXT><![CDATA[input[i] == ','
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="36">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="66">
+                <TEXT><![CDATA[upperBorder = Integer.Parse(input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="64">
+                <TEXT><![CDATA[output = rnd.Next( 0, upperBorder)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="43">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="17">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="84">
+                <TEXT><![CDATA[WrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="18">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="92">
+                <TEXT><![CDATA[Console.WriteLine("Ungültige Eingabe. Versuche es erneut oder beende das Programm mit [E]")
+
+Console.WriteLine(" Zufällige Zahlen: R(Max) oder R(Min,Max) ohne Leerzeichen")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="87">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[positionOfPeriod = i]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="29">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="24">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="72" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="31" TO="11" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="10" FROM="9" TO="7" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="12" FROM="11" TO="59" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="13" TO="18" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="13" TO="16" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="11" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="22" TO="24" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="16" TO="22" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="18" TO="24" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="24" TO="29" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="29" TO="31" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="8" FROM="7" TO="31" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="94" FROM="61" TO="80" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="34" TO="36" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="34" TO="39" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="60" FROM="59" TO="45" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="36" TO="66" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="56" FROM="54" TO="76" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="42" FROM="39" TO="74" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="53" FROM="51" TO="54" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="63" FROM="45" TO="34" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="57" FROM="43" TO="54" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="65" FROM="64" TO="43" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="67" FROM="66" TO="64" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="69" FROM="68" TO="51" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="75" FROM="74" TO="68" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="73" FROM="72" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="79" FROM="76" TO="61" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="90" FROM="89" TO="95" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="83" FROM="80" TO="84" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="86" FROM="84" TO="92" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="91" FROM="87" TO="89" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="81" FROM="80" TO="89" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="93" FROM="92" TO="87" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="96" FROM="95" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="3" NAME="calculateAddition" CREATED="2019.10.10 10:13:03" MODIFIED="2019.10.11 12:57:41">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="16">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[calculateAddition]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="40">
+                <TEXT><![CDATA[double X = 0
+double Y = 0
+
+double output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Console.WriteLine ("X + Y = ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[UseFormerAnswer
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="110">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[Console.WriteLine ( "X:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="25">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="27">
+                <TEXT><![CDATA[Console.WriteLine ( "Y:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="28">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="29">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="113">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="42">
+                <TEXT><![CDATA[output = X + Y
+
+Console.WriteLine(X + " + " + Y + " = " + output);
+
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="45">
+                <TEXT><![CDATA[Console.WriteLine ("Du kannst das vorige Ergebnis durch Eingabe von -A- verwenden.")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="108">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[X = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="31">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="32">
+                <TEXT><![CDATA[Y = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="40" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="106" FROM="4" TO="45" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="41" FROM="40" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="19" FROM="16" TO="14" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="22" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="16" TO="25" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="14" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="22" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="20" TO="22" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="25" TO="27" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="27" TO="28" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="31" TO="28" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="28" TO="29" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="36" FROM="32" TO="31" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="29" TO="32" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="114" FROM="113" TO="42" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="29" TO="113" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="105" FROM="8" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="43" FROM="42" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="111" FROM="110" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="107" FROM="45" TO="108" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="104" FROM="4" TO="110" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="112" FROM="108" TO="110" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="14" NAME="calculateSubtraction" CREATED="2019.10.11 09:48:17" MODIFIED="2019.10.11 12:57:41">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="16">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[calculateSubtraction]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[double X = 0
+double Y = 0
+
+double output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="5">
+                <TEXT><![CDATA[Console.WriteLine ("X - Y = ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[UseFormerAnswer
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="7">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Console.WriteLine ( "X:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="9">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="45">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Console.WriteLine ( "Y:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="13">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="47">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[output = X - Y
+
+Console.WriteLine(X + " - " + Y + " = " + output);
+
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="17">
+                <TEXT><![CDATA[Console.WriteLine ("Du kannst das vorige Ergebnis durch Eingabe von [A] verwenden.")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="19">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[X = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[Y = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="4" TO="5" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="5" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="6" TO="17" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="6" TO="7" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="17" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="18" TO="7" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="7" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="8" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="19" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="9" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="20" TO="19" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="10" TO="20" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="46" FROM="45" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="10" TO="45" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="12" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="21" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="13" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="22" TO="21" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="41" FROM="14" TO="22" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="48" FROM="47" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="42" FROM="14" TO="47" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="16" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="16" NAME="calculateProduct" CREATED="2019.10.11 10:22:56" MODIFIED="2019.10.11 12:57:41">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="16">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[calculateProduct]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="3">
+                <TEXT><![CDATA[double X = 0
+double Y = 0
+
+double output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Console.WriteLine ("X * Y = ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="5">
+                <TEXT><![CDATA[UseFormerAnswer
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="7">
+                <TEXT><![CDATA[Console.WriteLine ( "X:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="9">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="43">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="11">
+                <TEXT><![CDATA[Console.WriteLine ( "Y:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="13">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="45">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="15">
+                <TEXT><![CDATA[output = X * Y
+
+Console.WriteLine(X + " * " + Y + " = " + output);
+
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[Console.WriteLine ("Du kannst das vorige Ergebnis durch Eingabe von [A] verwenden.")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="17">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="19">
+                <TEXT><![CDATA[X = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[Y = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="22" FROM="3" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="4" TO="5" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="5" TO="16" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="5" TO="6" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="16" TO="17" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="17" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="6" TO="7" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="7" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="18" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="8" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="19" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="9" TO="19" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="46" FROM="45" TO="15" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="9" TO="43" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="36" FROM="11" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="20" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="12" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="21" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="13" TO="21" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="43" TO="11" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="41" FROM="13" TO="45" TEXT="nein" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="17" NAME="calculateDivision" CREATED="2019.10.11 10:24:21" MODIFIED="2019.10.11 12:57:41">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="16">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[calculateDivision]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[double X = 0
+double Y = 0
+
+double output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="5">
+                <TEXT><![CDATA[Console.WriteLine ("X / Y = ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[UseFormerAnswer
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="7">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Console.WriteLine ( "X:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="9">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="45">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Console.WriteLine ( "Y:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="13">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="47">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[output = X / Y
+
+Console.WriteLine(X + " / " + Y + " = " + output);
+
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="17">
+                <TEXT><![CDATA[Console.WriteLine ("Du kannst das vorige Ergebnis durch Eingabe von [A] verwenden.")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="19">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[X = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[Y = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="4" TO="5" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="5" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="6" TO="17" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="6" TO="7" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="17" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="18" TO="7" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="7" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="8" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="19" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="9" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="20" TO="19" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="10" TO="20" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="48" FROM="47" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="10" TO="45" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="12" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="21" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="13" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="22" TO="21" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="41" FROM="14" TO="22" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="46" FROM="45" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="42" FROM="14" TO="47" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="16" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="19" NAME="calculateExponentiation" CREATED="2019.10.11 12:28:58" MODIFIED="2019.10.11 12:28:58">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="16">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[calculateExponentiation]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[double X = 0
+double Y = 0
+
+double output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="5">
+                <TEXT><![CDATA[Console.WriteLine ("X ^ Y = ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[UseFormerAnswer
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="7">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Console.WriteLine ( "X:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="9">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="11">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Console.WriteLine ( "Y:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="13">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="15">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[output = math.Pow(X, Y)
+
+Console.WriteLine(X + " ^ " + Y + " = " + output);
+
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="17">
+                <TEXT><![CDATA[Console.WriteLine ("Du kannst das vorige Ergebnis durch Eingabe von [A] verwenden.")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="19">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[X = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[Y = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="4" TO="5" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="5" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="6" TO="17" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="6" TO="7" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="17" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="18" TO="7" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="7" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="8" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="19" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="9" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="20" TO="19" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="10" TO="20" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="10" TO="11" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="36" FROM="11" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="12" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="21" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="13" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="22" TO="21" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="41" FROM="14" TO="22" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="42" FROM="14" TO="15" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="43" FROM="15" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="16" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="20" NAME="calculateRootChooseExponent" CREATED="2019.10.11 12:30:01" MODIFIED="2019.10.11 12:30:01">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="16">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[calculateRootChooseExponent]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[double X = 0
+double Y = 0
+
+double output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="5">
+                <TEXT><![CDATA[Console.WriteLine ("X ^ (1/Y) = ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[UseFormerAnswer
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="7">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Console.WriteLine ( "X:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="9">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="11">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Console.WriteLine ( "Y:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="13">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="15">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[output = Math.Pow(X, (1/Y))
+
+Console.WriteLine(X + " ^ (1/" + Y + ") = " + output);
+
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="15">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="17">
+                <TEXT><![CDATA[Console.WriteLine ("Du kannst das vorige Ergebnis durch Eingabe von [A] verwenden.")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="19">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[X = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="21">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[Y = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="4" TO="5" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="5" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="6" TO="17" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="6" TO="7" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="17" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="18" TO="7" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="7" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="8" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="19" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="9" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="20" TO="19" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="10" TO="20" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="10" TO="11" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="36" FROM="11" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="37" FROM="12" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="38" FROM="21" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="13" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="40" FROM="22" TO="21" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="41" FROM="14" TO="22" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="42" FROM="14" TO="15" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="43" FROM="15" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="16" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="23" NAME="calculateFaculty" CREATED="2019.10.11 12:34:24" MODIFIED="2019.10.11 12:34:24">
+        <LAYOUT FORMAT="1.00" COLUMNS="3" ROWS="15">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[calculateFaculty]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[double X = 0
+double Y = 0
+
+double output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="5">
+                <TEXT><![CDATA[Console.WriteLine ("X / Y = ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[UseFormerAnswer
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="7">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Console.WriteLine ( "X:= ")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="9">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[wrongInput
+&& !end
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="11">
+                <TEXT><![CDATA[wrongInput = true]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="47">
+                <TEXT><![CDATA[output = 1]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="56">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="45">
+                <TEXT><![CDATA[for-Schleife mit i
+von 1 <= X?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[Console.WriteLine(X + "! = " + output);
+
+return output]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="17">
+                <TEXT><![CDATA[Console.WriteLine ("Du kannst das vorige Ergebnis durch Eingabe von [A] verwenden.")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="19">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[X = calculateInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="12">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="51">
+                <TEXT><![CDATA[output= output * i]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="54">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="52">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="23" FROM="4" TO="5" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="24" FROM="5" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="25" FROM="6" TO="17" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="26" FROM="6" TO="7" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="27" FROM="17" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="28" FROM="18" TO="7" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="7" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="8" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="19" TO="9" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="32" FROM="9" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="33" FROM="20" TO="19" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="34" FROM="10" TO="20" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="35" FROM="10" TO="11" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="58" FROM="54" TO="56" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="55" FROM="52" TO="54" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="48" FROM="47" TO="56" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="50" FROM="45" TO="51" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="53" FROM="51" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="57" FROM="56" TO="45" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="46" FROM="45" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="36" FROM="11" TO="47" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="44" FROM="16" TO="2" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="24" NAME="parseFindSubstring (String input)" CREATED="2019.10.14 13:07:53" MODIFIED="2019.10.15 12:24:23">
+        <LAYOUT FORMAT="1.00" COLUMNS="1" ROWS="9">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[parseFindSubstring (String input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Eingabe von 
+String Input]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[String subInput
+
+int lasteftBracket = -1
+
+int firstRightBracket = (input.length - 1) +1]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="15">
+                <TEXT><![CDATA[lastLeftBracket = input.IndexOf(")")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="33">
+                <TEXT><![CDATA[firstRightBracket = input.LastIndexOf("(")]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="52">
+                <TEXT><![CDATA[subInput = input.Substring(lastLeftBracket, (firstRightBracket + 1) - lastLeftBracket)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="63">
+                <TEXT><![CDATA[return subInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="15" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="48" FROM="15" TO="33" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="65" FROM="33" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="53" FROM="52" TO="63" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="64" FROM="63" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="25" NAME="parseCalculateSubstring (sting subInput)" CREATED="2019.10.14 13:20:39" MODIFIED="2019.10.15 14:10:16">
+        <LAYOUT FORMAT="1.00" COLUMNS="9" ROWS="28">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="90">
+                <TEXT><![CDATA[Rechenzeichen bei subInput[0] ist immer ein Vorzeichen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="13">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="231">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="21">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="173">
+                <TEXT><![CDATA[zweites +1, da sicher ist, dass eine Zahl oder Vorzeichen folgt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="23">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="247">
+                <TEXT><![CDATA[Die drei Blöcke gehören zusammen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="25">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="235">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[parseCalculateSubstring (sting subInput)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Eingabe von
+String subInput]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="250">
+                <TEXT><![CDATA[subInput = input.Substring(0+1 , (subInput.Length -1) -1)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[char[] operationHierarchy = 
+{'!',
+'%', 
+'^', 'V',
+'*', '/',
+'+', '-' }]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="93">
+                <TEXT><![CDATA[int operationPosition = 0
+double operationIndex = 99]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="114">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="88">
+                <TEXT><![CDATA[for-Schleife mit i
+von 0+1 <= subInput.Length]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="13">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="229">
+                <TEXT><![CDATA[operationPosition == 0
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="14">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="119">
+                <TEXT><![CDATA[double X = 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="70">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="16">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[for-Schleife mit i
+von (nextOperation-1) >= 0
+i--]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="19">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="156">
+                <TEXT><![CDATA[double X = 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="20">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="183">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="21">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="158">
+                <TEXT><![CDATA[for-Schleife mit i
+von (nextOperation+1 +1) >= subInput.Length-1]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="22">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="240">
+                <TEXT><![CDATA[string subInputAnswer =]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="23">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="243">
+                <TEXT><![CDATA[consoleChooseOperation (string input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="24">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="245">
+                <TEXT><![CDATA[.ToString()]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="25">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="237">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="26">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="248">
+                <TEXT><![CDATA[Ausgabe von subInputAnswer]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="27">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="4">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="191">
+                <TEXT><![CDATA[Klassenvariable]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="5">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="118">
+                <TEXT><![CDATA[mit IsDigit?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="95">
+                <TEXT><![CDATA[(Char.IsNumber(x) || x == '.')
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="101">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="16">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="124">
+                <TEXT><![CDATA[Subinput[i] != "1" ||
+supInput[i] != "2" ||
+... ||
+subInput[i] != "."
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="18">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="135">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="21">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="162">
+                <TEXT><![CDATA[Subinput[i] != "1" ||
+supInput[i] != "2" ||
+... ||
+subInput[i] != "."
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="22">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="163">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="99">
+                <TEXT><![CDATA[Subinput[i+1] == "1" ||
+supInput[i+1] == "2" ||
+... ||
+subInput[i+1] == "+" ||
+subInput[i+1] == "-"
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="103">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="16">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="129">
+                <TEXT><![CDATA[[Subinput[i] == "+" ||
+supInput[i] == "-" ]
+&&
+[i == 0 ||
+Subinput[i-1] != "1" ||
+...
+supInput[i-1] != "0"]
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="17">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="133">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="98">
+                <TEXT><![CDATA[nextoperation = i]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="213">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="9">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="197">
+                <TEXT><![CDATA[for-Schleife mit n
+von 0 < operationHierachy.Length]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="192">
+                <TEXT><![CDATA[break]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="15">
+              <FIGURE SUBTYPE="PapComment" FORMAT="1.00" ID="132">
+                <TEXT><![CDATA[Vorzeichen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="16">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="140">
+                <TEXT><![CDATA[X = Double.Parse(subInput.Substring(
+nextOperation - (i ),
+i
+))
+break;]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="17">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="139">
+                <TEXT><![CDATA[X = Double.Parse(subInput.Substring(
+nextOperation - (i -1),
+i-1
+))
+break;]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="21">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="172">
+                <TEXT><![CDATA[Y = Double.Parse(subInput.Substring(
+nextOperation +1,
+i
+))
+break;]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="9">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="202">
+                <TEXT><![CDATA[subInput[i] == operationHierarchy[n]
+?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="206">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="15">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="68">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="16">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="130">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="17">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="150">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="18">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="148">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="20">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="181">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="21">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="186">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="22">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="178">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="204">
+                <TEXT><![CDATA[operationIndex = i
+break;]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="221">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="9">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="219">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="7" ROW="10">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="225">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="8" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="113">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="8" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="194">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="8" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="108">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="250" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="156" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="123" FROM="119" TO="70" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="164" FROM="162" TO="163" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="184" FROM="183" TO="158" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="242" FROM="240" TO="243" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="128" FROM="124" TO="129" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="126" FROM="124" TO="135" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="138" FROM="133" TO="139" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="153" FROM="148" TO="150" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="187" FROM="186" TO="181" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="161" FROM="158" TO="162" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="151" FROM="139" TO="150" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="122" FROM="6" TO="124" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="152" FROM="150" TO="130" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="93" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="72" FROM="68" TO="70" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="131" FROM="129" TO="140" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="134" FROM="129" TO="133" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="155" FROM="130" TO="68" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="141" FROM="140" TO="130" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="143" FROM="135" TO="148" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="89" FROM="88" TO="229" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="92" FROM="88" TO="95" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="115" FROM="114" TO="88" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="97" FROM="95" TO="99" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="100" FROM="99" TO="98" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="102" FROM="95" TO="101" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="104" FROM="101" TO="103" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="105" FROM="99" TO="103" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="111" FROM="108" TO="194" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="107" FROM="103" TO="108" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="214" FROM="213" TO="197" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="94" FROM="93" TO="114" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="116" FROM="113" TO="114" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="230" FROM="229" TO="119" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="71" FROM="70" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="168" FROM="162" TO="172" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="166" FROM="163" TO="178" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="185" FROM="181" TO="183" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="157" FROM="156" TO="183" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="180" FROM="178" TO="186" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="188" FROM="172" TO="186" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="238" FROM="237" TO="248" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="196" FROM="192" TO="194" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="198" FROM="197" TO="192" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="203" FROM="197" TO="202" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="205" FROM="202" TO="204" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="207" FROM="202" TO="206" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="232" FROM="229" TO="231" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="210" FROM="206" TO="225" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="222" FROM="221" TO="213" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="193" FROM="98" TO="213" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="227" FROM="225" TO="219" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="218" FROM="204" TO="219" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="223" FROM="219" TO="221" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="195" FROM="194" TO="113" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="159" FROM="158" TO="240" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="234" FROM="231" TO="235" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="239" FROM="235" TO="237" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="244" FROM="243" TO="245" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="246" FROM="245" TO="237" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="249" FROM="248" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="251" FROM="250" TO="8" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="27" NAME="parseAll" CREATED="2019.10.15 12:05:31" MODIFIED="2019.10.15 13:31:09">
+        <LAYOUT FORMAT="1.00" COLUMNS="3" ROWS="12">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="36">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="26">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="10">
+                <TEXT><![CDATA[subInput =]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="7">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="17">
+                <TEXT><![CDATA[subInputAnswer =]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[parseAll]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Eingabe von 
+String input]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="3">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="11">
+                <TEXT><![CDATA[String SubInput = "nichts"
+String subInputAnswer = "nichts"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="4">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="46">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="5">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[input.Replace( subInput, subInputAnswer)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="6">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[parseFindSubstring (String input)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="7">
+              <FIGURE SUBTYPE="PapModule" FORMAT="1.00" ID="15">
+                <TEXT><![CDATA[parseCalculateSubstring (sting subInput)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="8">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="13">
+                <TEXT><![CDATA[do-while-Schleife
+
+input != subInput?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="43">
+                <TEXT><![CDATA[double answer = Double.Parse(subInputAnswer)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="10">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Ausgabe von 
+double answer]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="11">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="11" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="57" FROM="43" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="55" FROM="18" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="22" FROM="13" TO="26" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="49" FROM="46" TO="18" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="16" FROM="15" TO="13" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="12" FROM="11" TO="46" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="30" FROM="17" TO="15" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="31" FROM="10" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="29" FROM="26" TO="36" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="45" FROM="36" TO="46" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="58" FROM="6" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="56" FROM="13" TO="43" TEXT="Ausgang der Schleife" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XmlWorld version="KaraX 1.0 javakara" sizey="35" sizex="25">
+    <XmlWallPoints>
+        <XmlPoint y="24" x="3"/>
+        <XmlPoint y="23" x="3"/>
+        <XmlPoint y="22" x="3"/>
+        <XmlPoint y="21" x="3"/>
+        <XmlPoint y="20" x="3"/>
+        <XmlPoint y="19" x="3"/>
+        <XmlPoint y="12" x="3"/>
+        <XmlPoint y="11" x="3"/>
+        <XmlPoint y="10" x="3"/>
+        <XmlPoint y="9" x="3"/>
+        <XmlPoint y="8" x="3"/>
+        <XmlPoint y="7" x="3"/>
+        <XmlPoint y="6" x="3"/>
+        <XmlPoint y="5" x="3"/>
+        <XmlPoint y="4" x="3"/>
+        <XmlPoint y="3" x="3"/>
+        <XmlPoint y="2" x="3"/>
+        <XmlPoint y="1" x="3"/>
+        <XmlPoint y="0" x="3"/>
+        <XmlPoint y="13" x="3"/>
+        <XmlPoint y="14" x="3"/>
+        <XmlPoint y="15" x="3"/>
+        <XmlPoint y="16" x="3"/>
+        <XmlPoint y="17" x="3"/>
+        <XmlPoint y="18" x="3"/>
+        <XmlPoint y="1" x="0"/>
+        <XmlPoint y="1" x="1"/>
+        <XmlPoint y="1" x="2"/>
+        <XmlPoint y="9" x="2"/>
+        <XmlPoint y="9" x="1"/>
+        <XmlPoint y="9" x="0"/>
+        <XmlPoint y="23" x="2"/>
+        <XmlPoint y="21" x="0"/>
+        <XmlPoint y="21" x="1"/>
+        <XmlPoint y="21" x="2"/>
+        <XmlPoint y="25" x="0"/>
+        <XmlPoint y="25" x="1"/>
+        <XmlPoint y="25" x="2"/>
+        <XmlPoint y="25" x="3"/>
+        <XmlPoint y="25" x="4"/>
+        <XmlPoint y="25" x="5"/>
+        <XmlPoint y="25" x="6"/>
+        <XmlPoint y="25" x="7"/>
+        <XmlPoint y="25" x="8"/>
+        <XmlPoint y="25" x="9"/>
+        <XmlPoint y="25" x="10"/>
+        <XmlPoint y="25" x="11"/>
+        <XmlPoint y="25" x="12"/>
+        <XmlPoint y="25" x="13"/>
+        <XmlPoint y="25" x="14"/>
+        <XmlPoint y="25" x="15"/>
+        <XmlPoint y="25" x="16"/>
+        <XmlPoint y="25" x="17"/>
+        <XmlPoint y="25" x="18"/>
+        <XmlPoint y="25" x="19"/>
+        <XmlPoint y="25" x="20"/>
+        <XmlPoint y="25" x="21"/>
+        <XmlPoint y="25" x="22"/>
+        <XmlPoint y="25" x="23"/>
+        <XmlPoint y="25" x="24"/>
+        <XmlPoint y="27" x="24"/>
+        <XmlPoint y="27" x="23"/>
+        <XmlPoint y="27" x="22"/>
+        <XmlPoint y="27" x="21"/>
+        <XmlPoint y="27" x="20"/>
+        <XmlPoint y="27" x="19"/>
+        <XmlPoint y="27" x="18"/>
+        <XmlPoint y="27" x="17"/>
+        <XmlPoint y="27" x="16"/>
+        <XmlPoint y="27" x="15"/>
+        <XmlPoint y="27" x="14"/>
+        <XmlPoint y="27" x="13"/>
+        <XmlPoint y="27" x="12"/>
+        <XmlPoint y="27" x="11"/>
+        <XmlPoint y="27" x="10"/>
+        <XmlPoint y="27" x="9"/>
+        <XmlPoint y="27" x="8"/>
+        <XmlPoint y="27" x="7"/>
+        <XmlPoint y="27" x="6"/>
+        <XmlPoint y="27" x="5"/>
+        <XmlPoint y="27" x="4"/>
+        <XmlPoint y="27" x="3"/>
+        <XmlPoint y="27" x="2"/>
+        <XmlPoint y="27" x="1"/>
+        <XmlPoint y="27" x="0"/>
+        <XmlPoint y="26" x="0"/>
+        <XmlPoint y="26" x="24"/>
+        <XmlPoint y="24" x="13"/>
+        <XmlPoint y="24" x="14"/>
+        <XmlPoint y="24" x="12"/>
+        <XmlPoint y="23" x="13"/>
+        <XmlPoint y="22" x="12"/>
+        <XmlPoint y="22" x="13"/>
+        <XmlPoint y="22" x="14"/>
+        <XmlPoint y="21" x="13"/>
+        <XmlPoint y="28" x="24"/>
+        <XmlPoint y="29" x="24"/>
+        <XmlPoint y="29" x="23"/>
+        <XmlPoint y="29" x="22"/>
+        <XmlPoint y="29" x="21"/>
+        <XmlPoint y="29" x="20"/>
+        <XmlPoint y="29" x="19"/>
+        <XmlPoint y="29" x="18"/>
+        <XmlPoint y="29" x="17"/>
+        <XmlPoint y="29" x="16"/>
+        <XmlPoint y="29" x="15"/>
+        <XmlPoint y="29" x="14"/>
+        <XmlPoint y="29" x="13"/>
+        <XmlPoint y="29" x="12"/>
+        <XmlPoint y="29" x="11"/>
+        <XmlPoint y="29" x="10"/>
+        <XmlPoint y="29" x="9"/>
+        <XmlPoint y="29" x="8"/>
+        <XmlPoint y="29" x="7"/>
+        <XmlPoint y="29" x="6"/>
+        <XmlPoint y="29" x="5"/>
+        <XmlPoint y="29" x="4"/>
+        <XmlPoint y="29" x="3"/>
+        <XmlPoint y="29" x="2"/>
+        <XmlPoint y="29" x="1"/>
+        <XmlPoint y="29" x="0"/>
+        <XmlPoint y="28" x="0"/>
+    </XmlWallPoints>
+    <XmlObstaclePoints>
+        <XmlPoint y="2" x="1"/>
+        <XmlPoint y="3" x="1"/>
+        <XmlPoint y="5" x="1"/>
+        <XmlPoint y="4" x="1"/>
+        <XmlPoint y="6" x="1"/>
+        <XmlPoint y="8" x="1"/>
+        <XmlPoint y="7" x="1"/>
+        <XmlPoint y="10" x="10"/>
+        <XmlPoint y="6" x="17"/>
+        <XmlPoint y="23" x="0"/>
+    </XmlObstaclePoints>
+    <XmlPaintedfieldPoints>
+        <XmlPoint y="14" x="7" type="0"/>
+        <XmlPoint y="13" x="13" type="0"/>
+        <XmlPoint y="18" x="21" type="0"/>
+        <XmlPoint y="8" x="22" type="0"/>
+        <XmlPoint y="3" x="21" type="0"/>
+        <XmlPoint y="2" x="12" type="0"/>
+        <XmlPoint y="2" x="6" type="0"/>
+        <XmlPoint y="11" x="0" type="0"/>
+        <XmlPoint y="11" x="1" type="0"/>
+        <XmlPoint y="11" x="2" type="0"/>
+        <XmlPoint y="12" x="2" type="0"/>
+        <XmlPoint y="13" x="2" type="0"/>
+        <XmlPoint y="14" x="2" type="0"/>
+        <XmlPoint y="13" x="1" type="0"/>
+        <XmlPoint y="13" x="0" type="0"/>
+        <XmlPoint y="15" x="2" type="0"/>
+        <XmlPoint y="15" x="1" type="0"/>
+        <XmlPoint y="15" x="0" type="0"/>
+        <XmlPoint y="26" x="23" type="0"/>
+        <XmlPoint y="26" x="21" type="0"/>
+        <XmlPoint y="26" x="22" type="0"/>
+        <XmlPoint y="26" x="19" type="0"/>
+        <XmlPoint y="26" x="20" type="0"/>
+        <XmlPoint y="28" x="16" type="0"/>
+        <XmlPoint y="28" x="17" type="0"/>
+        <XmlPoint y="28" x="19" type="0"/>
+        <XmlPoint y="28" x="18" type="0"/>
+        <XmlPoint y="28" x="21" type="0"/>
+        <XmlPoint y="28" x="23" type="0"/>
+    </XmlPaintedfieldPoints>
+    <XmlKaraList>
+        <XmlKara y="23" x="1" name="Kara" direction="0"/>
+    </XmlKaraList>
+    <XmlStreetList/>
+</XmlWorld>
